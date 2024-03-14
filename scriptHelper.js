@@ -10,7 +10,7 @@ function addDestinationInfo(
   moons,
   imageUrl
 ) {
-  //Task 3: Here is the HTML formatting for our mission target div.
+  //Task 3: Here is the HTML formatting for our mission target div..
   const htmlString = `
         <h2>Mission Destination</h2>
         <ol>
