@@ -41,12 +41,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   // Validate pilot
   if (validateInput(pilot) === "Empty") {
     alert("Pilot input cannot be empty");
+  } else if (!isNaN(pilot)) {
+    alert("Pilot input cannot be a number");
     return false;
   }
 
   // Validate copilot
   if (validateInput(copilot) === "Empty") {
-    alert("Copilot input cannot be empty");
+    alert("Pilot input cannot be empty");
+  } else if (!isNaN(copilot)) {
+    alert("Copilot input cannot be a number");
     return false;
   }
 
