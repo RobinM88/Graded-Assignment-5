@@ -41,7 +41,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   // Validate pilot
   if (validateInput(pilot) === "Empty") {
     alert("Pilot input cannot be empty");
-  } else if (!isNaN(pilot)) {
+  } else if (validateInput(pilot) === "Is a Number") {
     alert("Pilot input cannot be a number");
     return false;
   }
@@ -49,7 +49,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   // Validate copilot
   if (validateInput(copilot) === "Empty") {
     alert("Pilot input cannot be empty");
-  } else if (!isNaN(copilot)) {
+  } else if (validateInput(copilot) === "Is a Number") {
     alert("Copilot input cannot be a number");
     return false;
   }
@@ -57,12 +57,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   // Validate fuelLevel
   if (validateInput(fuelLevel) === "Empty") {
     alert("Fuel Level cannot be empty");
+  } else if(validateInput(fuelLevel) === "Not a Number") {
+    alert("Fuel level must be a number")
     return false;
   }
 
   // Validate cargoLevel
   if (validateInput(cargoLevel) === "Empty") {
     alert("Cargo Level cannot be empty");
+  } else if(validateInput(cargoLevel) === "Not a Number") {
+    alert("Cargo level must be a number")
     return false;
   }
 
